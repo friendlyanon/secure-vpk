@@ -1,7 +1,21 @@
 $bytes = [System.IO.File]::ReadAllBytes("eboot.bin");
-$bytes[128] = 0x00;
+$bytes[128] = 0x02;
+$bytes[129] = 0x00;
+$bytes[130] = 0x00;
+$bytes[131] = 0x00;
+$bytes[132] = 0x00;
+$bytes[133] = 0x00;
+$bytes[134] = 0x00;
+$bytes[135] = 0x2F;
 [System.IO.File]::WriteAllBytes('eboot.bin', $bytes);
 Clear-Variable "bytes" -Scope Script
 $bytes = [System.IO.File]::ReadAllBytes("mai_moe\eboot_origin.bin");
-$bytes[128] = 0x00;
+$bytes[128] = 0x02;
+$bytes[129] = 0x00;
+$bytes[130] = 0x00;
+$bytes[131] = 0x00;
+$bytes[132] = 0x00;
+$bytes[133] = 0x00;
+$bytes[134] = 0x00;
+$bytes[135] = 0x2F;
 [System.IO.File]::WriteAllBytes('mai_moe\eboot_origin.bin', $bytes);
