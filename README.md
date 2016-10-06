@@ -20,5 +20,5 @@ Usage
 Explanation
 -----------
 
-The powershell script simply writes the value `0x00` to offset
-`0x80` which disables extended API for the executable.
+The powershell script simply writes `02 00 00 00 2F` starting
+at offset `0x80` which disables extended API for the executable.
